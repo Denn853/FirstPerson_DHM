@@ -20,24 +20,26 @@ public class CharacterController : MonoBehaviour
     void Update()
     {
         View();
-        Move();
     }
 
+    private void FixedUpdate()
+    {
+        Move();
+    }
     void Move()
     {
-        Vector2 temp = new Vector2(Input.GetAxis("Horizontal"), Input.GetAxis("Verical"));
+        Vector2 temp = new Vector2(Input.GetAxis("Horizontal"), Input.GetAxis("Vertical"));
         if (temp.magnitude > 1f)
         {
             temp = temp.normalized;
         }
-        temp *= speed * Time.deltaTime;
+        temp *= speed * Time.fixedDeltaTime;
 
         transform.position += transform.forward * temp.y + transform.right * temp.x;
     }
     void View()
     {
         float horizontal = Input.GetAxis("Mouse X") * sensitivity.x * Time.deltaTime;
-        Debug.Log(horizontal);
         transform.eulerAngles = new Vector3(transform.eulerAngles.x, transform.eulerAngles.y + horizontal, transform.eulerAngles.z);
 
         float vertical = Input.GetAxis("Mouse Y") * sensitivity.y * Time.deltaTime;
