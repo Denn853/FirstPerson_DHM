@@ -7,11 +7,16 @@ using TMPro;
 
 public class PickUpLetter : MonoBehaviour
 {
-    public GameObject collectTextObj, intText;
+    public GameObject collectTextObj, intText, monster;
     public AudioSource pickingUpSound, ambienceLayer1, ambienceLayer2, ambienceLayer3, ambienceLayer4, ambienceLayer5, ambienceLayer6, ambienceLayer7, ambienceLayer8;
     public bool interactable;
     public static int pagesCollected;
     public TextMeshProUGUI collectText;
+
+    void Start()
+    {
+        pagesCollected = 0;
+    }
 
     private void OnTriggerEnter(Collider other)
     {
@@ -38,6 +43,12 @@ public class PickUpLetter : MonoBehaviour
             if (Input.GetKeyDown(KeyCode.E))
             {
                 pagesCollected = pagesCollected + 1;
+
+                if (monster.active == false)
+                {
+                    monster.SetActive(true); 
+                }
+
                 collectText.text = pagesCollected + "/8 pages";
                 collectTextObj.SetActive(true);
                 pickingUpSound.Play();
