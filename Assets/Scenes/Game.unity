@@ -4293,8 +4293,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 455a2effe60c9924fa867a6ffdce7b6a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  pauseMenuObj: {fileID: 1880110301}
-  optionsMenuObj: {fileID: 0}
+  pauseMenuObj: {fileID: 407543679}
+  optionsMenuObj: {fileID: 1880110301}
   player: {fileID: 1003476119}
   paused: 0
   menuSceneName: Menu
