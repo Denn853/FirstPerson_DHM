@@ -4,6 +4,7 @@ using System.Diagnostics;
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
+using UnityEngine.SceneManagement;
 
 public class PickUpLetter : MonoBehaviour
 {
@@ -12,6 +13,7 @@ public class PickUpLetter : MonoBehaviour
     public bool interactable;
     public static int pagesCollected;
     public TextMeshProUGUI collectText;
+    public string gameSceneName;
 
     void Start()
     {
@@ -90,6 +92,11 @@ public class PickUpLetter : MonoBehaviour
                 this.gameObject.SetActive(false);
                 interactable = false;
             }
+        }
+
+        if (pagesCollected == 8)
+        {
+            SceneManager.LoadScene(gameSceneName);
         }
     }
 }
