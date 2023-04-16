@@ -445,7 +445,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &88258946
 RectTransform:
   m_ObjectHideFlags: 0
@@ -3307,7 +3307,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   menu: {fileID: 1279635491}
-  options: {fileID: 510312038}
+  options: {fileID: 88258945}
   extras: {fileID: 454230682}
   credits: {fileID: 474447799}
   dificulty: {fileID: 1162728899}
@@ -8239,7 +8239,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Slendy '
+  m_text: Zombendy
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: e4a9773201d6e204888751c6849e8abe, type: 2}
   m_sharedMaterial: {fileID: -8636588689608783091, guid: e4a9773201d6e204888751c6849e8abe, type: 2}
